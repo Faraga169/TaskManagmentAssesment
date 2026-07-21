@@ -2,12 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Task_Managment.DAL;
 using Task_Managment.DAL.Presisitence.Context;
-
+using Task_Managment.DAL.Presisitence.Seeding;
 namespace Task_Managment.PL
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +24,7 @@ namespace Task_Managment.PL
 
             var app = builder.Build();
 
+            await SeedData.InitializeAsync(app.Services);
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -38,7 +39,7 @@ namespace Task_Managment.PL
 
 
             app.MapControllers();
-
+       
             app.Run();
         }
     }
