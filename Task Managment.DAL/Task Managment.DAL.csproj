@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Presisitence\Configurations\" />
     <Folder Include="Presisitence\Seeding\" />
   </ItemGroup>
 

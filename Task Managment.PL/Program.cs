@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using Task_Managment.DAL;
 using Task_Managment.DAL.Presisitence.Context;
 
 namespace Task_Managment.PL
@@ -17,7 +18,7 @@ namespace Task_Managment.PL
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<TaskManagemntDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddDataAccessLayer(builder.Configuration);
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
