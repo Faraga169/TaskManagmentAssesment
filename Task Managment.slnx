@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Task Managment.BLL/Task Managment.BLL.csproj" />
+  <Project Path="Task Managment.DAL/Task Managment.DAL.csproj" />
+  <Project Path="Task Managment.PL/Task Managment.API.csproj" />
+  <Project Path="TaskManagement.Tests/TaskManagement.Tests.csproj" />
+</Solution>
