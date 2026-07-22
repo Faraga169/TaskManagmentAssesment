@@ -20,7 +20,7 @@ namespace Task_Managment.BLL.Specifications.TaskSpecifications
             AddInclude(t => t.Project); 
             switch (specParams.Sort?.ToLower()) 
             { case "duedate": 
-                    AddOrderBy(t => t.DueDate); 
+                    AddOrderBy(t => t.DueDate!); 
                     break; 
                 case "priority": 
                     AddOrderByDescending(t => t.Priority); 

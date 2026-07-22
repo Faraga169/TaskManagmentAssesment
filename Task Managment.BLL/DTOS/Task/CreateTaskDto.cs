@@ -8,9 +8,7 @@ namespace Task_Managment.BLL.DTOS.Task
 {
     public class CreateTaskDto
     {
-        [Required(ErrorMessage = "Project ID is required.")]
-        [Range(1, int.MaxValue, ErrorMessage = "Please select a valid Project.")]
-        public int ProjectId { get; set; }
+      
 
         [Required(ErrorMessage = "Title is required.")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Title must be between 3 and 100 characters.")]

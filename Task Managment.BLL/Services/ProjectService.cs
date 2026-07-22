@@ -14,7 +14,7 @@ using Task_Managment.DAL.Specifications;
 
 namespace Task_Managment.BLL.Services
 {
-    public class ProjectService(IUnitOfWork _unitOfWork, Mapper _mapper, ICurrentUserService currentUserService) : IProjectService
+    public class ProjectService(IUnitOfWork _unitOfWork, IMapper _mapper, ICurrentUserService currentUserService) : IProjectService
     {
         public async Task<PaginationDTO<ProjectDto>> GetProjectsAsync(ProjectSpecParams specParams)
         {
@@ -37,6 +37,11 @@ namespace Task_Managment.BLL.Services
         {
             var project = _mapper.Map<Project>(dto);
             project.OwnerId = currentUserService.UserId!;
+            var existingProject = await _unitOfWork.Repository<Project>().GetEntityWithSpecAsync(new ProjectByNameSpecification(currentUserService.UserId!, dto.Name));
+
+
+            if (existingProject is not null)
+                throw new BadRequestException("A project with the same name already exists.");
             await _unitOfWork.Repository<Project>().AddAsync(project);
             await _unitOfWork.CompleteAsync();
             return _mapper.Map<ProjectDto>(project);
@@ -49,7 +54,11 @@ namespace Task_Managment.BLL.Services
             var project = await _unitOfWork.Repository<Project>().GetEntityWithSpecAsync(spec);
             if (project is null) 
                 throw new NotFoundException("Project not found.");
-            _mapper.Map(dto, project); _unitOfWork.Repository<Project>().Update(project);
+            _mapper.Map(dto, project);
+            var existingProject = await _unitOfWork.Repository<Project>().GetEntityWithSpecAsync(new ProjectByNameSpecification(currentUserService.UserId!, dto.Name));
+            if (existingProject is not null)
+                throw new BadRequestException("A project with the same name already exists.");
+            _unitOfWork.Repository<Project>().Update(project);
             await _unitOfWork.CompleteAsync();
             return _mapper.Map<ProjectDto>(project);
 
