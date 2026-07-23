@@ -15,7 +15,7 @@ using Task_Managment.PL.Extensions;
 using System.Text.Json.Serialization;
 namespace Task_Managment.PL
 {
-    public class Program
+    public partial class Program
     {
         public static async Task Main(string[] args)
         {
@@ -23,7 +23,7 @@ namespace Task_Managment.PL
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+           
 
             builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -45,7 +45,10 @@ namespace Task_Managment.PL
 
             var app = builder.Build();
 
-            await SeedData.InitializeAsync(app.Services);
+            if (!app.Environment.IsEnvironment("Testing"))
+            {
+                await SeedData.InitializeAsync(app.Services);
+            }
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -64,6 +67,14 @@ namespace Task_Managment.PL
             app.MapControllers();
        
             app.Run();
-        }
+
+       
+        
     }
+
+      
+    }
+
+    
+    
 }

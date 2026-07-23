@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Task_Managment.BLL.DTOS.Common;
 using Task_Managment.BLL.DTOS.Project;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.DAL.Specifications.Parameters;
 
-namespace Task_Managment.BLL.Services
+namespace Task_Managment.BLL.Services.Interfaces
 {
     public interface IProjectService
     {

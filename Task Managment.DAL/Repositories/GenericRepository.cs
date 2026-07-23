@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using Task_Managment.BLL.Specification;
 using Task_Managment.DAL.Presisitence.Context;
 using Task_Managment.DAL.Repositories.Interfaces;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.DAL.Specifications.Base;
 
 namespace Task_Managment.DAL.Repositories
 {

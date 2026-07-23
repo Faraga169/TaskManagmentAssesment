@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task_Managment.BLL.Specification;
 using Task_Managment.DAL.Presisitence.Models;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.DAL.Specifications.Base;
+using Task_Managment.DAL.Specifications.Parameters;
 using Task = Task_Managment.DAL.Presisitence.Models.Task;
 
 namespace Task_Managment.BLL.Specifications.TaskSpecifications
 {
     public class TasksSpecification : BaseSpecification<Task>
     {
-        public TasksSpecification(string ownerId, TaskSpecParams specParams) : base(t => t.Project.OwnerId == ownerId && 
+        public TasksSpecification(string ownerId, TaskSpecParams specParams, bool applyPaging = true) : base(t => t.Project.OwnerId == ownerId && 
         (string.IsNullOrEmpty(specParams.Search) || t.Title.ToLower().Contains(specParams.Search.ToLower())) && 
         (!specParams.Status.HasValue || t.Status == specParams.Status) && 
         (!specParams.Priority.HasValue || t.Priority == specParams.Priority) &&
@@ -31,8 +31,11 @@ namespace Task_Managment.BLL.Specifications.TaskSpecifications
                 default: 
                     AddOrderByDescending(t => t.CreatedAt); 
                     break; 
-            } 
-            ApplyPaging((specParams.PageIndex - 1) * specParams.PageSize, specParams.PageSize); 
+            }
+            if (applyPaging)
+            {
+                ApplyPaging((specParams.PageIndex - 1) * specParams.PageSize, specParams.PageSize);
+            }
         }
     }
 }

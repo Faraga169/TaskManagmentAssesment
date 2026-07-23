@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Task_Managment.BLL.DTOS.Auth;
 using Task_Managment.BLL.Exceptions;
+using Task_Managment.BLL.Services.Interfaces;
 using Task_Managment.DAL.Presisitence.Models;
 
 namespace Task_Managment.BLL.Services

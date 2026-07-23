@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task_Managment.BLL.Specification;
+using Task_Managment.DAL.Specifications.Base;
 
 namespace Task_Managment.DAL.Repositories.Interfaces
 {

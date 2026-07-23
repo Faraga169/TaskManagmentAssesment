@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Task_Managment.BLL.DTOS.Project;
 using Task_Managment.BLL.DTOS.Task;
-using Task_Managment.BLL.Services;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.BLL.Services.Interfaces;
+using Task_Managment.DAL.Specifications.Parameters;
 
 namespace Task_Managment.PL.Controllers
 {
@@ -60,7 +60,7 @@ namespace Task_Managment.PL.Controllers
         [HttpPost("{id:int}/tasks")]
         public async Task<IActionResult> CreateTask(int id,CreateTaskDto dto)
         {
-            var task = await _taskService.CreateForProjectAsync(id, dto);
+            var task = await _taskService.CreateAsync(id, dto);
 
             return CreatedAtAction(nameof(TaskController.Get),"Task",new { id = task.Id },task);
         }

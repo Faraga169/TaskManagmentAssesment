@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task_Managment.BLL.Specification;
 using Task_Managment.DAL.Presisitence.Models;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.DAL.Specifications.Base;
+using Task_Managment.DAL.Specifications.Parameters;
 using Task = Task_Managment.DAL.Presisitence.Models.Task;
 
 namespace Task_Managment.BLL.Specifications.TaskSpecifications

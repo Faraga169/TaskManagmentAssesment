@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Task_Managment.BLL.Specification
+namespace Task_Managment.DAL.Specifications.Base
 {
     public interface ISpecification<T>
     {

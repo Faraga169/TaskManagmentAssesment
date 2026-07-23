@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Task_Managment.BLL.DTOS.Auth;
 
-namespace Task_Managment.BLL.Services
+namespace Task_Managment.BLL.Services.Interfaces
 {
     public interface IAuthService
     {

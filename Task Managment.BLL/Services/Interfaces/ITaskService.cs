@@ -4,9 +4,9 @@ using System.Text;
 using Task_Managment.BLL.DTOS.Common;
 using Task_Managment.BLL.DTOS.Task;
 using Task_Managment.DAL.Presisitence.Models;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.DAL.Specifications.Parameters;
 
-namespace Task_Managment.BLL.Services
+namespace Task_Managment.BLL.Services.Interfaces
 {
     public interface ITaskService
     {
@@ -15,7 +15,6 @@ namespace Task_Managment.BLL.Services
         Task<TaskDTO> CreateAsync(int projectId, CreateTaskDto dto); 
         Task<TaskDTO> UpdateAsync(int id, UpdateTaskDto dto); 
         Task<int> DeleteAsync(int id);
-        Task<TaskDTO> CreateForProjectAsync(int projectId,CreateTaskDto dto);
         Task<PaginationDTO<TaskDTO>> GetProjectTasksAsync(int projectId,TaskSpecParams specParams);
     }
 }

@@ -2,5 +2,6 @@
   <Project Path="Task Managment.BLL/Task Managment.BLL.csproj" />
   <Project Path="Task Managment.DAL/Task Managment.DAL.csproj" />
   <Project Path="Task Managment.PL/Task Managment.API.csproj" />
-  <Project Path="TaskManagement.Tests/TaskManagement.Tests.csproj" />
+  <Project Path="TaskManagement.Tests/TaskManagement.Tests.Unit.csproj" />
+  <Project Path="Task_Management.Tests.Integration/TaskManagement.Tests.Integration.csproj" Id="488f9ab0-79b1-41fc-aae1-c5fe2bfa5b6e" />
 </Solution>

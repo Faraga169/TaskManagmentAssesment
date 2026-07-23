@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Task_Managment.BLL.DTOS.Task;
-using Task_Managment.BLL.Services;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.BLL.Services.Interfaces;
+using Task_Managment.DAL.Specifications.Parameters;
 
 namespace Task_Managment.PL.Controllers
 {

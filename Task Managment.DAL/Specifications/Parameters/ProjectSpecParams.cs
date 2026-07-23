@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Task_Managment.DAL.Specifications
+namespace Task_Managment.DAL.Specifications.Parameters
 {
     public class ProjectSpecParams
     {

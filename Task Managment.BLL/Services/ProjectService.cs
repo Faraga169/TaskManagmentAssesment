@@ -6,11 +6,12 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Task_Managment.BLL.DTOS.Common;
 using Task_Managment.BLL.DTOS.Project;
 using Task_Managment.BLL.Exceptions;
+using Task_Managment.BLL.Services.Interfaces;
 using Task_Managment.BLL.Specifications.ProjectSpecifications;
 using Task_Managment.DAL.Presisitence.Models;
 using Task_Managment.DAL.Repositories;
 using Task_Managment.DAL.Repositories.Interfaces;
-using Task_Managment.DAL.Specifications;
+using Task_Managment.DAL.Specifications.Parameters;
 
 namespace Task_Managment.BLL.Services
 {
@@ -56,7 +57,7 @@ namespace Task_Managment.BLL.Services
                 throw new NotFoundException("Project not found.");
             _mapper.Map(dto, project);
             var existingProject = await _unitOfWork.Repository<Project>().GetEntityWithSpecAsync(new ProjectByNameSpecification(currentUserService.UserId!, dto.Name));
-            if (existingProject is not null)
+            if (existingProject is not null && existingProject.Id != id)
                 throw new BadRequestException("A project with the same name already exists.");
             _unitOfWork.Repository<Project>().Update(project);
             await _unitOfWork.CompleteAsync();

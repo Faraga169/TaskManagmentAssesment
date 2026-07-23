@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using Task_Managment.BLL.Specification;
 
-namespace Task_Managment.DAL.Specifications
+namespace Task_Managment.DAL.Specifications.Base
 {
     public class SpecificationEvaluator<T> where T : class
     {

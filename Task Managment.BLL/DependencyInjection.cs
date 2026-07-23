@@ -15,6 +15,7 @@ using Task_Managment.BLL.AutoMapper.Profiles;
 using Task_Managment.BLL.FluentValidation;
 using Task_Managment.BLL.Helper;
 using Task_Managment.BLL.Services;
+using Task_Managment.BLL.Services.Interfaces;
 using Task_Managment.DAL.Presisitence.Context;
 using Task_Managment.DAL.Presisitence.Models;
 

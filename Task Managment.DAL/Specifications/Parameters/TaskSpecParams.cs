@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Task_Managment.DAL.Enums;
 
-namespace Task_Managment.DAL.Specifications
+namespace Task_Managment.DAL.Specifications.Parameters
 {
     public class TaskSpecParams
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Task_Managment.BLL.DTOS.Auth;
-using Task_Managment.BLL.Services;
+using Task_Managment.BLL.Services.Interfaces;
 
 namespace Task_Managment.PL.Controllers
 {
