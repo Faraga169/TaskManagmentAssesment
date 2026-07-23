@@ -1,0 +1,1112 @@
+{
+  "info": {
+    "_postman_id": "0ff69ad6-a797-4c97-bda7-6f8d0440d9b8",
+    "name": "Task Managment.API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36205795"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "register",
+              "item": [
+                {
+                  "name": "/api/Auth/register",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"email\": \"AhmedFaragFekry@gmail.com\",\n  \"password\": \"Ahmed2003#\",\n  \"userName\": \"AhmedFarag\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Auth/register",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Auth",
+                        "register"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"email\": \"hETC@ShNw1u.ZGVQyja\",\n  \"password\": \"mqU&t<Y$:W>\",\n  \"userName\": \"Z70yL9t\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Auth/register",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Auth",
+                            "register"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"token\": \"string\",\n  \"expiration\": \"1950-08-14T04:12:52.127Z\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "login",
+              "item": [
+                {
+                  "name": "/api/Auth/login",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"email\": \"hX+s.OwU@toclLpPW.RjMVPXiCJIVs\",\n  \"password\": \"mZ2kGR97d)GIH\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Auth/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"email\": \"hX+s.OwU@toclLpPW.RjMVPXiCJIVs\",\n  \"password\": \"mZ2kGR97d)GIH\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Auth/login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Auth",
+                            "login"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"token\": \"string\",\n  \"expiration\": \"1950-08-14T04:12:52.127Z\"\n}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Project",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "tasks",
+                  "item": [
+                    {
+                      "name": "/api/Project/:id/tasks",
+                      "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Project/:id/tasks?PageIndex=1623&PageSize=1623&Search=string&Status=3&Priority=3&DueDateFrom=1951-12-17&DueDateTo=1951-12-17&Sort=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Project",
+                            ":id",
+                            "tasks"
+                          ],
+                          "query": [
+                            {
+                              "key": "PageIndex",
+                              "value": "1623"
+                            },
+                            {
+                              "key": "PageSize",
+                              "value": "1623"
+                            },
+                            {
+                              "key": "Search",
+                              "value": "string"
+                            },
+                            {
+                              "key": "Status",
+                              "value": "3"
+                            },
+                            {
+                              "key": "Priority",
+                              "value": "3"
+                            },
+                            {
+                              "key": "DueDateFrom",
+                              "value": "1951-12-17"
+                            },
+                            {
+                              "key": "DueDateTo",
+                              "value": "1951-12-17"
+                            },
+                            {
+                              "key": "Sort",
+                              "value": "string"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/Project/:id/tasks?PageIndex=1623&PageSize=1623&Search=string&Status=3&Priority=3&DueDateFrom=1951-12-17&DueDateTo=1951-12-17&Sort=string",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "Project",
+                                ":id",
+                                "tasks"
+                              ],
+                              "query": [
+                                {
+                                  "key": "PageIndex",
+                                  "value": "1623"
+                                },
+                                {
+                                  "key": "PageSize",
+                                  "value": "1623"
+                                },
+                                {
+                                  "key": "Search",
+                                  "value": "string"
+                                },
+                                {
+                                  "key": "Status",
+                                  "value": "3"
+                                },
+                                {
+                                  "key": "Priority",
+                                  "value": "3"
+                                },
+                                {
+                                  "key": "DueDateFrom",
+                                  "value": "1951-12-17"
+                                },
+                                {
+                                  "key": "DueDateTo",
+                                  "value": "1951-12-17"
+                                },
+                                {
+                                  "key": "Sort",
+                                  "value": "string"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "1623"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "body": ""
+                        }
+                      ]
+                    },
+                    {
+                      "name": "/api/Project/:id/tasks",
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"priority\": 1,\n  \"projectId\": 1024876329,\n  \"title\": \"( S\",\n  \"description\": \"string\",\n  \"dueDate\": \"2024-02-02\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Project/:id/tasks",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Project",
+                            ":id",
+                            "tasks"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "name": "OK",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"priority\": 1,\n  \"projectId\": 1024876329,\n  \"title\": \"( S\",\n  \"description\": \"string\",\n  \"dueDate\": \"2024-02-02\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/Project/:id/tasks",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "Project",
+                                ":id",
+                                "tasks"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id",
+                                  "value": "1623"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "body": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/Project/:id",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Project/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Project",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1623"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Project/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Project",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/Project/:id",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"h﻿4z\",\n  \"description\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Project/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Project",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1623"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"name\": \"h﻿4z\",\n  \"description\": \"string\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Project/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Project",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/Project/:id",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Project/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Project",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1623"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Project/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Project",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "/api/Project",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{json_web_token_0s1w}}\n",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/Project?PageIndex=1&PageSize=5",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "Project"
+                  ],
+                  "query": [
+                    {
+                      "key": "PageIndex",
+                      "value": "1"
+                    },
+                    {
+                      "key": "PageSize",
+                      "value": "5"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Project?PageIndex=1623&PageSize=1623",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Project"
+                      ],
+                      "query": [
+                        {
+                          "key": "PageIndex",
+                          "value": "1623"
+                        },
+                        {
+                          "key": "PageSize",
+                          "value": "1623"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            },
+            {
+              "name": "/api/Project",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmODkzYjZjMi0yMzJkLTQzYTgtODkwYi1kYTUxYjY2ZjMzYzMiLCJlbWFpbCI6IkFobWVkRmFyYWdGZWtyeUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImY4OTNiNmMyLTIzMmQtNDNhOC04OTBiLWRhNTFiNjZmMzNjMyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBaG1lZEZhcmFnIiwiZXhwIjoxNzg0NzQ3NDQ4LCJpc3MiOiJUYXNrTWFuYWdlbWVudEFwaSIsImF1ZCI6IlRhc2tNYW5hZ2VtZW50Q2xpZW50In0.fwS2T3ySPTxCGvR6Uzvo0VFI4BIO-xbj9kkal8b2iTI"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"h﻿4z\",\n  \"description\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/Project",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "Project"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"name\": \"h﻿4z\",\n  \"description\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Project",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Project"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Task",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "/api/Task/:id",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Task/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Task",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1623"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Task/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Task",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/Task/:id",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"priority\": 1,\n  \"status\": 2,\n  \"title\": \"ceC1d\",\n  \"description\": \"string\",\n  \"dueDate\": \"2007-06-22\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Task/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Task",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1623"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"priority\": 1,\n  \"status\": 2,\n  \"title\": \"ceC1d\",\n  \"description\": \"string\",\n  \"dueDate\": \"2007-06-22\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Task/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Task",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                },
+                {
+                  "name": "/api/Task/:id",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Task/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Task",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1623"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Task/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Task",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1623"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "/api/Task",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/Task?PageIndex=1623&PageSize=1623&Search=string&Status=3&Priority=3&DueDateFrom=1951-12-17&DueDateTo=1951-12-17&Sort=string",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "Task"
+                  ],
+                  "query": [
+                    {
+                      "key": "PageIndex",
+                      "value": "1623"
+                    },
+                    {
+                      "key": "PageSize",
+                      "value": "1623"
+                    },
+                    {
+                      "key": "Search",
+                      "value": "string"
+                    },
+                    {
+                      "key": "Status",
+                      "value": "3"
+                    },
+                    {
+                      "key": "Priority",
+                      "value": "3"
+                    },
+                    {
+                      "key": "DueDateFrom",
+                      "value": "1951-12-17"
+                    },
+                    {
+                      "key": "DueDateTo",
+                      "value": "1951-12-17"
+                    },
+                    {
+                      "key": "Sort",
+                      "value": "string"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Task?PageIndex=1623&PageSize=1623&Search=string&Status=3&Priority=3&DueDateFrom=1951-12-17&DueDateTo=1951-12-17&Sort=string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Task"
+                      ],
+                      "query": [
+                        {
+                          "key": "PageIndex",
+                          "value": "1623"
+                        },
+                        {
+                          "key": "PageSize",
+                          "value": "1623"
+                        },
+                        {
+                          "key": "Search",
+                          "value": "string"
+                        },
+                        {
+                          "key": "Status",
+                          "value": "3"
+                        },
+                        {
+                          "key": "Priority",
+                          "value": "3"
+                        },
+                        {
+                          "key": "DueDateFrom",
+                          "value": "1951-12-17"
+                        },
+                        {
+                          "key": "DueDateTo",
+                          "value": "1951-12-17"
+                        },
+                        {
+                          "key": "Sort",
+                          "value": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "/"
+    },
+    {
+      "key": "json_web_token_0s1w",
+      "secret": true
+    },
+    {
+      "key": "bearer_token_0q7i",
+      "secret": true
+    }
+  ]
+}
